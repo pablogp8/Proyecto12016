@@ -1,0 +1,82 @@
+id
+?			cLienzo
+¿			aLienzo
+>>			coment
+<- dsa->	comentMult
+$			finLinea
+
+==			igual
+!=			diferente
+<			menor
+>			mayor
+<=			menIgual
+>=			mayIgual
+!&¡			nulo
+
+||			oCond
+&&			andCond
+!&&			nandCond
+!||			norCond
+&|			xorCond
+!			notCond
+
++			sum
+-			rest
+*			mult
+/			divi
+^			poten
+
+[			aCorch
+]			cCorch
+,			coma
+extiende	herren
+
+publico		publ
+privado		priv
+protegido	prot
+
+var			varbl
+Conservar	conserv
+
+=			asigna
+
+entero		ent
+doble		doble
+cadena		cade
+boolean		boole
+caracter	carac
+
+++			aumento
+--			decre
+
+arreglo		arreg
+{			allave
+}			cllave
+
+si			cond
+(			aParen
+)			cParen
+sino		elseD
+
+comprobar	caseC
+caso		casoC
+salir		breakS
+defecto		defaultD
+:			dPuntos
+
+para		forP
+;			pComa
+
+mientras	whileM
+
+hacer		dowhileH
+
+continuar	continC
+
+Pintar_P	pintarPunto
+"			dComilla
+Pintar_Or	pintarOvalRec
+Pintar_S	pintarCad
+Principal	methPrinc
+Ordenar		ordenArray
+Sumarizar	sumArray

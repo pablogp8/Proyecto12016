@@ -1,0 +1,66 @@
+s->Inicio
+
+Inicio-> Lienzo id DIS
+
+DIS-> EXTEN	sigCier CUERPO sigAbr
+
+EXTEN-> herren LID 
+		| epsilon
+		
+LID-> id coma LID
+	|id asigna LID2
+	|id
+	
+LID2-> TIPOVAL coma LID
+	|TIPOVAL
+	
+	
+CUERPO-> VARIABLES
+	|ASIG
+	
+
+TIPOVAL -> id
+		|Num
+		|true
+		|false
+		|stringCadena
+		|OPER
+		
+
+TIPOD-> ent
+	|doble
+	|cade
+	|boole
+	|carac
+	
+VISIBILIDAD -> publ
+		|priv
+		|prot
+		
+VARIABLES-> CONSV varbl TIPOD LID finLinea
+
+CONSV -> Conservar
+	|epsilon
+	
+ASIG= id asigna TIPOVAL finLinea
+	|id SIMPL
+
+OPER -> OPER sum OPER
+	|OPER rest OPER
+	|OPER mult OPER
+	|OPER divi OPER
+	|OPER poten OPER
+	|aParen OPER cParen
+	|FST
+	
+FST -> num
+	|id
+	|carac
+	|doble
+	
+SIMPL -> aumento
+	|decre
+	|simpleSum
+	|simpleRes
+	
+	

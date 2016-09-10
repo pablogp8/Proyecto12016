@@ -1,0 +1,143 @@
+//OPCIONES JAVACC
+options{
+	STATIC = false;
+	KEEP_LINE_COLUMN= TRUE;
+}
+
+PARSER_BEGIN(Analizador1)
+//unidad de compilacion java
+
+public class Analizador1{
+	
+}
+
+PARSER_END(Analizador1)
+
+//reglas de produccion
+SKIP:
+{
+  " "
+  | "\t"
+  | "\n"
+  | "\r"
+  | <"//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
+  | <"/*" (~["*"])* "*" (~["/"] (~["*"])* "*")* "/">	
+}
+
+TOKEN :
+{
+     <NUM: (["0"-"9"])+ ("." (["0"-"9"])+ )? >
+     | <ID: ["a"-"z","A"-"Z"] ( ["a"-"z","A"-"Z","0"-"9","_"]  )* >
+}
+
+TOKEN:
+{
+	<sigCier: "?">
+	|<sigAbr:"¿">
+	|<coment:">>">
+	|<comentMult:"<-">
+	|<finLinea: "$">
+	|<Lien: "Lienzo">
+}
+
+TOKEN:
+{
+	<igual:"==">
+	|<difer:"!=">
+	|<menor:"<">
+	|<mayor:">">
+	|<menIgual:"<=">
+	|<mayIgual:">=">
+	|<nulo:"!&¡">
+}
+
+TOKEN:
+{
+	<oCond:"||">
+	|<andCond:"&&">
+	|<nandCond:"!&&">
+	|<norCond:"!||">
+	|<xorCond:"&|">
+	|<notCond:"!">
+}
+
+TOKEN:
+{
+	<sum:"+">
+	|<rest:"-">
+	|<mult:"*">
+	|<divi:"/">
+	|<poten:"^">
+	|
+}
+
+TOKEN:
+{
+	<aCorch:"[">
+	|<cCorch:"]">
+	|<coma:",">
+	|<herren:"extiende">
+}
+
+TOKEN:
+{
+	<publ:"publico">
+	|<priv:"privado">
+	|<prot:"protegido">
+	|<varbl:"var">
+	|<conserv:"Conservar">
+	|<asigna:"=">
+}
+
+TOKEN:
+{
+	<ent:"entero">
+	|<doble:"doble">
+	|<cade:"cadena">
+	|<boole:"boolean">
+	|<carac:"caracter">
+}
+
+TOKEN
+{
+	<aumento:"++">
+	|<decre:"--">
+	|<arreg:"arreglo">
+	|<allave:"(">
+	|<cllave:")">
+}
+
+TOKEN:
+{
+	<cond:"si">
+	|<aParen:"(">
+	|<cParen:")">
+	|<elseD:"sino">
+	|<caseC:"comprobar">
+	|<casoC:"caso">
+	|<breakS:"salir">
+	|<defaultD:"defecto">
+	|<dPuntos:":">
+}
+
+TOKEN:
+{
+	<forP:"para">
+	|<pComa:";">
+	|<whileM:"mientras">
+	|<dowhileH:"hacer">
+	|<continC:"continuar">
+}
+
+TOKEN:
+{
+	<pintarPunt:"Pintar_P">
+	|<pintarOvRec:"Pintar_Or">
+	|<pintarCad:"Pintar_S">
+	|<methPrinc:"Principal">
+	|<ordenArray:"Ordenar">
+	|<sumArray:"Sumarizar">
+}
+
+/**PRUDUCCION */
+
